@@ -10,7 +10,8 @@ import java.util.List;
 
 public class LongestStringWithoutCharDuplicate {
 
-  private static final Logger logger = LogManager.getLogger(LongestStringWithoutCharDuplicate.class);
+  private static final Logger logger =
+      LogManager.getLogger(LongestStringWithoutCharDuplicate.class);
 
   public static int longestSubstringBruteForce(String s) {
 
