@@ -51,5 +51,13 @@ public class ArrayOperations {
     logger.info("Finding minimum element value from array");
     MinElementArray minElementArray = new MinElementArray();
     minElementArray.findMin(integerArray1D);
+
+    logger.info("Reverse array");
+    ReverseArray reverseArray = new ReverseArray();
+    integerArray1D = reverseArray.reverseArray(integerArray1D);
+    logger.info("Array after reversing {}", integerArray1D);
+
+    integerArray1D = reverseArray.reverseArrayUsingCollections(integerArray1D);
+    logger.info("Array after reversing {}", integerArray1D);
   }
 }
