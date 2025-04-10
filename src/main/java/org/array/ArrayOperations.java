@@ -59,5 +59,9 @@ public class ArrayOperations {
 
     integerArray1D = reverseArray.reverseArrayUsingCollections(integerArray1D);
     logger.info("Array after reversing {}", integerArray1D);
+
+    logger.info("Sum of elements in array");
+    ArrayElementSum arrayElementSum = new ArrayElementSum();
+    logger.info("Sum of array : {}", arrayElementSum.sumOfElements(integerArray1D));
   }
 }
