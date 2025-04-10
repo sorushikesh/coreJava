@@ -7,8 +7,7 @@ public class MaxElementArray {
 
   private static final Logger logger = LogManager.getLogger(MaxElementArray.class);
 
-  public void findMax(int[] arr) {
-
+  public int findMax(int[] arr) {
     logger.info("Finding the max value from array {}", arr);
 
     int max = Integer.MIN_VALUE;
@@ -19,5 +18,7 @@ public class MaxElementArray {
     }
 
     logger.info("Maximum value from array {} is {}", arr, max);
+    return max;
   }
 }
+

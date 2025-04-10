@@ -7,7 +7,7 @@ public class MinElementArray {
 
   private static final Logger logger = LogManager.getLogger(MinElementArray.class);
 
-  public void findMin(int[] arr) {
+  public int findMin(int[] arr) {
 
     logger.info("Finding the minimum value from array {}", arr);
 
@@ -19,5 +19,6 @@ public class MinElementArray {
     }
 
     logger.info("Minimum value from array {} is {}", arr, min);
+    return min;
   }
 }
