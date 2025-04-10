@@ -9,10 +9,14 @@ public class ArrayApplication {
 
   public static void main(String[] args) {
 
-    int[] integerArray1D = {1, -1, 156, 165655616, 5616516, 0, -1000};
+    int[] integerArray1D = {1, -1, 156, 165655616, 5616516, 0, -1000, -654161651};
 
     logger.info("Finding max element value from array");
     MaxElementArray maxElementArray = new MaxElementArray();
     maxElementArray.findMax(integerArray1D);
+
+    logger.info("Finding minimum element value from array");
+    MinElementArray minElementArray = new MinElementArray();
+    minElementArray.findMin(integerArray1D);
   }
 }
