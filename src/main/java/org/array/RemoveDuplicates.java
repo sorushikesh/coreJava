@@ -9,25 +9,25 @@ public class RemoveDuplicates {
 
   private static final Logger logger = LogManager.getLogger(RemoveDuplicates.class);
 
-  /**
-   * Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such
+  /*
+   * Given an integer array numbs sorted in non-decreasing order, remove the duplicates in-place such
    * that each unique element appears only once. The relative order of the elements should be kept
-   * the same. Then return the number of unique elements in nums.
+   * the same. Then return the number of unique elements in numbs.
    *
-   * @param nums Integer Array
+   * @param numbs Integer Array
    * @return Number of unique elements
    */
-  public int removeDuplicatesFromSortedArrayReturnIndex(int[] nums) {
+  public int removeDuplicatesFromSortedArrayReturnIndex(int[] numbs) {
 
-    logger.info("Removing duplicate elements from sorted array and return array index {}", nums);
+    logger.info("Removing duplicate elements from sorted array and return array index {}", numbs);
 
-    if (nums == null || nums.length == 0)
+    if (numbs == null || numbs.length == 0)
       return 0;
     int uniqueIndex = 1;
 
-    for (int i = 1; i < nums.length; i++) {
-      if (nums[i] != nums[i - 1]) {
-        nums[uniqueIndex] = nums[i];
+    for (int i = 1; i < numbs.length; i++) {
+      if (numbs[i] != numbs[i - 1]) {
+        numbs[uniqueIndex] = numbs[i];
         uniqueIndex++;
       }
     }
@@ -35,30 +35,30 @@ public class RemoveDuplicates {
     return uniqueIndex;
   }
 
-  /**
+  /*
    * Given a sorted integer array, returns a new array with duplicates removed. The order of
    * elements is preserved.
    *
-   * @param nums Sorted integer array
+   * @param numbs Sorted integer array
    * @return Array of unique elements
    */
-  public int[] removeDuplicatesFromSortedArrayReturnArray(int[] nums) {
+  public int[] removeDuplicatesFromSortedArrayReturnArray(int[] numbs) {
 
-    logger.info("Removing duplicate elements from sorted array and return unique array {}", nums);
+    logger.info("Removing duplicate elements from sorted array and return unique array {}", numbs);
 
-    if (nums == null || nums.length == 0)
+    if (numbs == null || numbs.length == 0)
       return new int[0];
 
     int uniqueIndex = 1;
 
-    for (int i = 1; i < nums.length; i++) {
-      if (nums[i] != nums[i - 1]) {
-        nums[uniqueIndex] = nums[i];
+    for (int i = 1; i < numbs.length; i++) {
+      if (numbs[i] != numbs[i - 1]) {
+        numbs[uniqueIndex] = numbs[i];
         uniqueIndex++;
       }
     }
 
-    int[] result = Arrays.copyOf(nums, uniqueIndex);
+    int[] result = Arrays.copyOf(numbs, uniqueIndex);
     logger.info("Unique elements array: {}", Arrays.toString(result));
     return result;
   }
