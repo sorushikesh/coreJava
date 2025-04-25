@@ -39,13 +39,15 @@ public class SearchAlgo {
     int low = 0, high = arr.length - 1;
 
     while (low <= high) {
+      // Finding mid-point
       int mid = low + (high - low) / 2;
-      if (arr[mid] == target)
+      if (arr[mid] == target) {
         return mid;
-      else if (arr[mid] < target)
+      } else if (arr[mid] < target) {
         low = mid + 1;
-      else
+      } else {
         high = mid - 1;
+      }
     }
 
     return -1;
