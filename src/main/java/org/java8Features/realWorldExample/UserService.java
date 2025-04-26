@@ -10,11 +10,12 @@ public class UserService {
   private final List<User> users;
 
   public UserService() {
-    users = Arrays.asList(new User("1", "Alice", "alice@gmail.com", UserStatus.ACTIVE.name(), "Mumbai"),
-        new User("2", "Bob", "bob@gmail.com", UserStatus.INACTIVE.name(), "Pune"),
-        new User("3", "Charlie", "charlie@gmail.com", UserStatus.ACTIVE.name(), "Delhi"),
-        new User("4", "David", "david@gmail.com", UserStatus.ACTIVE.name(), "Mumbai"),
-        new User("5", "Eva", "eva@gmail.com", UserStatus.INACTIVE.name(), "Pune"));
+    users =
+        Arrays.asList(new User("1", "Alice", "alice@gmail.com", UserStatus.ACTIVE.name(), "Mumbai"),
+            new User("2", "Bob", "bob@gmail.com", UserStatus.INACTIVE.name(), "Pune"),
+            new User("3", "Charlie", "charlie@gmail.com", UserStatus.ACTIVE.name(), "Delhi"),
+            new User("4", "David", "david@gmail.com", UserStatus.ACTIVE.name(), "Mumbai"),
+            new User("5", "Eva", "eva@gmail.com", UserStatus.INACTIVE.name(), "Pune"));
   }
 
   public List<User> getAllUsers() {

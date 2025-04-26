@@ -50,7 +50,8 @@ public class ReverseInteger {
     for (int num : testNumbers) {
       logger.info("Original number : {}", num);
       logger.info("Reverse value of {} : {}", num, reverseInteger(num));
-      logger.info("Reverse value of {} using string conversion: {}", num, reverseIntegerUsingString(num));
+      logger.info("Reverse value of {} using string conversion: {}", num,
+          reverseIntegerUsingString(num));
     }
   }
 }

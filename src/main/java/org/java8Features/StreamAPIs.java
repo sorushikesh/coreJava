@@ -34,9 +34,7 @@ public class StreamAPIs {
     }
     logger.info("Sum using traditional way: {}", sum);
 
-    int streamSum = Arrays.stream(arr)
-        .filter(n -> n % 2 == 0)
-        .sum();
+    int streamSum = Arrays.stream(arr).filter(n -> n % 2 == 0).sum();
     logger.info("Sum using Stream API: {}", streamSum);
   }
 
@@ -46,9 +44,7 @@ public class StreamAPIs {
   public static void mapExample() {
     List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
-    List<Integer> squares = numbers.stream()
-        .map(n -> n * n)
-        .collect(Collectors.toList());
+    List<Integer> squares = numbers.stream().map(n -> n * n).collect(Collectors.toList());
 
     logger.info("Squares: {}", squares);
   }
@@ -59,9 +55,7 @@ public class StreamAPIs {
   public static void sortExample() {
     List<Integer> numbers = Arrays.asList(5, 3, 9, 1, 7);
 
-    List<Integer> sortedNumbers = numbers.stream()
-        .sorted()
-        .collect(Collectors.toList());
+    List<Integer> sortedNumbers = numbers.stream().sorted().collect(Collectors.toList());
 
     logger.info("Sorted Numbers: {}", sortedNumbers);
   }
@@ -72,9 +66,8 @@ public class StreamAPIs {
   public static void distinctExample() {
     List<Integer> numbersWithDuplicates = Arrays.asList(1, 2, 2, 3, 4, 4, 5);
 
-    List<Integer> distinctNumbers = numbersWithDuplicates.stream()
-        .distinct()
-        .collect(Collectors.toList());
+    List<Integer> distinctNumbers =
+        numbersWithDuplicates.stream().distinct().collect(Collectors.toList());
 
     logger.info("Distinct Numbers: {}", distinctNumbers);
   }
@@ -85,9 +78,8 @@ public class StreamAPIs {
   public static void collectExample() {
     List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
 
-    List<Integer> evenNumbers = numbers.stream()
-        .filter(n -> n % 2 == 0)
-        .collect(Collectors.toList());
+    List<Integer> evenNumbers =
+        numbers.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
 
     logger.info("Even Numbers Collected: {}", evenNumbers);
   }
@@ -98,8 +90,7 @@ public class StreamAPIs {
   public static void reduceExample() {
     List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
-    int product = numbers.stream()
-        .reduce(1, (a, b) -> a * b);
+    int product = numbers.stream().reduce(1, (a, b) -> a * b);
 
     logger.info("Product of Numbers: {}", product);
   }
